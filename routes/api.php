@@ -23,6 +23,12 @@ use App\Http\Controllers\API\V1\CategoryController;
 
     Route::middleware('auth:api')->group(function () {
 
+        //User Route
+        Route::get('/users/all','API\V1\UserController@getAllUsers');
+
+        // Notification Route
+        Route::get('/notify/{userToken}','API\V1\UserController@notifyUser');
+
     //Category Routes
     Route::prefix('categories')->group(function () {
         Route::get('/index','API\V1\CategoryController@index');
