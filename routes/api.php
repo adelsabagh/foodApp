@@ -50,7 +50,7 @@ use App\Http\Controllers\API\V1\CategoryController;
     });
 
     //Order Items Routes
-    Route::prefix('orderItems')->group(function () {
+        Route::prefix('orderItems')->group(function () {
         Route::get('/show/{id}', 'API\V1\OrderItemController@show');
         Route::post('/update/{id}', 'API\V1\OrderItemController@update');
         Route::post('/store', 'API\V1\OrderItemController@store');
