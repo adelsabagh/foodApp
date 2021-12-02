@@ -16,7 +16,7 @@ class CategoryController extends Controller
 
     public function show($id)
     {
-        return response()->json(Category::find($id));
+        return response()->json(Category::find($id)->with(["item"])->where('id','=', $id)->get());
     }
 
 }
