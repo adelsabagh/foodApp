@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API\V1;
 
 use App\Http\Controllers\Controller;
+use App\Post;
 use App\Profile;
 use App\User;
 use Illuminate\Http\Request;
@@ -49,6 +50,19 @@ class UserController extends Controller
         $profile->save();
 
         return response()->json($user);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $old_user = User::find($id);
+
+        $old_user->user_id = Auth::id();
+
+        $old_user->name = $request->name;
+
+        $old_user->save();
+
+        return response()->json($old_user);
     }
 
     public function getAllUsers(){
