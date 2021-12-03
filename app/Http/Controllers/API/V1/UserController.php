@@ -54,9 +54,7 @@ class UserController extends Controller
 
     public function update(Request $request, $id)
     {
-        $old_user = User::find($id);
-
-        $old_user->user_id = Auth::id();
+        $old_user = User::find(Auth::id());
 
         $old_user->name = $request->name;
 
