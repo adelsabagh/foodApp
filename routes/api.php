@@ -25,7 +25,7 @@ use App\Http\Controllers\API\V1\CategoryController;
 
         //User Route
         Route::get('/users/all','API\V1\UserController@getAllUsers');
-        Route::post('/users/update/{id}','API\V1\UserController@update');
+        Route::post('/users/update','API\V1\UserController@update');
 
         // Notification Route
         Route::get('/notify/{userToken}','API\V1\UserController@notifyUser');

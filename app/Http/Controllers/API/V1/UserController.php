@@ -52,7 +52,7 @@ class UserController extends Controller
         return response()->json($user);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $old_user = User::find(Auth::id());
 
