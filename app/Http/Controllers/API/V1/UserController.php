@@ -74,8 +74,7 @@ class UserController extends Controller
 
         $getTokenOwnerData = Profile::where('fcm_token',$userToken)->with('user')->first();
 
-        //$SERVER_API_KEY = 'AAAAkcLxgGo:APA91bFGuXbd3o0YF2qcE_XbKRfC2tRIyl-pE_q4C3vl8kfjmYPhRk4DgAIwOHsNijbsAbu-NBdWyIdMnFZHg_QTm9uwNti-7lHpybEjQXF91xlJAoJbVQMJjljNNi3_uWkdCc3D0ZD9';
-
+        $SERVER_API_KEY ='AAAAeU2OgrE:APA91bFdW2xEzuQj8SnCawUSM3WhlqP8KyEcWxQXmqbIEMw2KNgIPxY69JTRaovGhtjBhx0830_VqtkA-JlNzbUBFSXySZrlb1GkG2EMN8ro4707L-ERrJbngtPFdAe58bouhV-fJKTu';
         $data = [
 
             "registration_ids" => [$userToken],
